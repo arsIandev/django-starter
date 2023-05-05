@@ -14,6 +14,8 @@ urlpatterns = [
         path("", include("registration.backends.default.urls")),
     ])),
     
+    # app urls
+    path("", include("app.urls")),
 ]
 # statics urls
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
