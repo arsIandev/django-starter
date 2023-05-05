@@ -1,0 +1,8 @@
+{% extends 'layouts/handler.html' %}
+
+{% block content %}
+    <h1 class="mr-3 pr-3 align-top border-right inline-block align-content-center">{{ status_code }}</h1>
+    <div class="inline-block align-middle">
+        <h2 class="font-weight-normal lead" id="desc">{{ message }}</h2>
+    </div>
+{% endblock %}
