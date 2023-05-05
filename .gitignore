@@ -24,7 +24,7 @@ package-lock.json
 .conda/*
 
 # django media file
-media/*
+media/
 
 # void migrations files
-migrations/*
+migrations/
