@@ -2,6 +2,17 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 from django.contrib.auth import get_user_model
 from django.utils.translation import gettext as _
+from registration.models import RegistrationProfile as AccountActivation
+from registration.admin import RegistrationAdmin as BaseAccountActivationAdmin
+from . import models
+
+
+admin.site.unregister(AccountActivation)
+
+
+@admin.register(models.AccountActivation)
+class AccountActivationAdmin(BaseAccountActivationAdmin):
+    pass
 
 
 # Register your models here.
@@ -38,5 +49,3 @@ class UserAdmin(DjangoUserAdmin):
     list_filter = ("is_staff", "is_superuser", "is_active", "groups")
     search_fields = ("email", "name")
     ordering = ("-date_joined",)
-
-    

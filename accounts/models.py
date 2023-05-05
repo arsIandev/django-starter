@@ -3,6 +3,7 @@ import uuid
 from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.models import AbstractUser
 from .managers import UserManager 
+from registration.models import RegistrationProfile as BaseAccountActivation
 
 
 class User(AbstractUser):
@@ -23,3 +24,8 @@ class User(AbstractUser):
     
     def get_full_name(self):
         return self.name
+
+
+class AccountActivation(BaseAccountActivation):
+    class Meta:
+        proxy = True
