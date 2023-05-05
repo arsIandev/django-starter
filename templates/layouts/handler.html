@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ title }} {% endblock %}
+
+{% block main_extra_css %}
+    {% block extra_css %} {% endblock %}
+{% endblock %}
+
+{% block main_content %}
+
+    <div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        {% block content %}{% endblock %}
+    </div>
+
+{% endblock %}
+
+{% block main_extra_js %}
+    {% block extra_js %} {% endblock %}
+{% endblock %}

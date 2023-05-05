@@ -11,7 +11,7 @@ urlpatterns = [
     # accounts urls
     path("accounts/", include([
         path("", include("accounts.urls")),
-        path("account/", include("registration.backends.default.urls")),
+        path("", include("registration.backends.default.urls")),
     ])),
     
 ]
