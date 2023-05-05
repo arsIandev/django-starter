@@ -1,0 +1,27 @@
+# byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+.idea/
+
+# tests and coverage
+*.pytest_cache
+.coverage
+
+# database & logs
+*.db
+*.sqlite3
+*.log
+
+# other
+.DS_Store
+
+# javascript
+package-lock.json
+
+.vscode/*
+# environment 
+.venv/*
+.conda/*
+
+# django media file
+media/*
